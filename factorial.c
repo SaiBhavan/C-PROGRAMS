@@ -1,12 +1,22 @@
 #include<stdio.h>
-int main()
+   int fact(int x);
+
+    int main(void)
 {
-	int i=1,f=1,n;
+	int n;
+	printf("enter value of n");
 	scanf("%d",&n);
-	while(i<=n)
+	int g=fact(n);
+	printf("factorial is %d",g);
+	return 0;
+}
+
+int fact(int x)
+{
+	int i,f=1;
+	for(i=1;i<=x;i++)
 	{
 		f=f*i;
-		i++;
 	}
-	printf("%d",f);
+	return f;
 }
